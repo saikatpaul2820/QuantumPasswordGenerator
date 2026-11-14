@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quantum-password-generator"
+version = "1.0.0"
+description = "Password generator powered by Qiskit quantum random number generation"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["qiskit>=0.45"]
+
+[project.optional-dependencies]
+aer = ["qiskit-aer"]
+ui = ["streamlit"]
+dev = ["pytest", "qiskit-aer"]
+
+[project.scripts]
+qpass = "quantum_password.cli:main"
+
+[tool.setuptools]
+packages = ["quantum_password"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

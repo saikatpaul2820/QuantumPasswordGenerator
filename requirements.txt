@@ -1,0 +1,4 @@
+qiskit>=1.0
+qiskit-aer>=0.14      # optional but recommended (fast simulator)
+streamlit>=1.30       # optional, only for app.py
+pytest>=7.0           # optional, only for tests
