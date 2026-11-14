@@ -1,0 +1,29 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "CLI: generate password",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "quantum_password",
+      "args": ["-l", "20", "--entropy", "--show-circuit", "--qubits", "4"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "CLI: ask for args",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "quantum_password",
+      "args": "${command:pickArgs}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Streamlit UI",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "streamlit",
+      "args": ["run", "app.py"],
+      "console": "integratedTerminal"
+    }
+  ]
+}
